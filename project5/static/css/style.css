@@ -1,3 +1,67 @@
-body{
-    color: rgba(235, 131, 12, 0.918);
+.page1{
+    background-image: url(../image/paysage\ féerique\ ✨️.jpeg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page2{
+    background-image: url(../image/background.jpeg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.font{
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    padding-right: 50px;
+    list-style-type: none;
+}
+.button{
+    background-color: rgb(35, 33, 51);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    margin-top: -10px;
+    border-radius: 5px;
+}
+li{
+    padding-right: 30px;
+}
+.block{
+    margin: 60px 0px 150px 650px;
+    background-color: rgba(85, 88, 121, 0.623);
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+}
+.login{
+    margin: auto;
+    padding: 20px;
+    padding-left: 45px;
+}
+.cred{
+    border-style: solid;
+    border: 0px 0px 15px 0px;
+    padding: 5px;
+    width: 250px;
+    margin: 5px;
+    background-color: antiquewhite;
+}
+.button2{
+    background-color: rgb(35, 33, 51);
+    color: rgb(255, 255, 255);
+    padding: 7px 115px;
+    margin-left: px;
+    margin-top: 20px;
+    border-radius: 5px;
 }

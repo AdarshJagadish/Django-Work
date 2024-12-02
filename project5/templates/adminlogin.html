@@ -10,7 +10,7 @@
         <title>Login</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
-    <body class="page1">
+    <body class="page2">
         <div class="main">
             <div class="nav font">
                 <h2 style="padding-left:50px;" class="font">LOGO</h2>
@@ -28,20 +28,15 @@
                         Contact
                     </li>
                     <li>
-                        <button class="button font">Login</button>
+                        <button class="button font">Register</button>
                     </li>
                 </ul>
             </div>
             <div class="block">
                 <div class="login">
-                    <h2 style="padding: 10px 90px;" class="font">Register</h2>
-                    <form action="../" method="post">
-                        {% csrf_token %}
-                        <input type="text" placeholder="Name" name="name"
-                            class="cred">
-                        <br>
-                        <br>
-                        <input type="email" placeholder="Email" name="email"
+                    <h2 style="padding: 10px 90px;" class="font">Admin Login</h2>
+                    <form action>
+                        <input type="text" placeholder="USERNAME" name="username"
                             class="cred">
                         <br>
                         <br>
@@ -52,7 +47,7 @@
                             style="color: rgb(45, 47, 61);">remember me
                         <div style="margin: -18px 0px 0px 155px;">forgot
                             password?</div>
-                        <input type="submit" value="Register" class="button2">
+                        <input type="button" value="Login" class="button2">
                     </form>
                     <p style="margin-left: 9px;" class="font">Don't have an account, Register</p>
                 </div>
