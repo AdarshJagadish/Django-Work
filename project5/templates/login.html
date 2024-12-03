@@ -36,7 +36,8 @@
         </div>
         <div class="block">
             <div class="login">
-                <h2 style="padding: 10px 90px;" class="font">Admin Login</h2>
+                <h2 style="padding: 10px 90px;" class="font">Sign In</h2>
+
                 <form action="../adminlogin" method="post">
                     {% csrf_token %}
                     <input type="text" placeholder="USERNAME" name="username" class="cred">
@@ -49,7 +50,9 @@
                         password?</div>
                     <input type="submit" value="Login" class="button2">
                 </form>
-                <p style="margin-left: 9px;" class="font">Don't have an account, Register</p>
+                <a href="register.html">
+                    <p style="margin-left: 9px;" class="font">Don't have an account, Register</p>
+                </a>
             </div>
         </div>
     </div>
