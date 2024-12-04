@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
     <title>Login</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blaa.css' %}">
 </head>
 
 <body class="page2">
@@ -30,27 +30,32 @@
                     Contact
                 </li>
                 <li>
-                    <button class="button font">Register</button>
+                    <a href="../adminlogin">
+                        <button class="button font">Admin Panel</button>
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="block">
             <div class="login">
-                <h2 style="padding: 10px 90px;" class="font">Sign In</h2>
+                <h2 style="padding: 10px 90px;" class="font">Log In</h2>
 
-                <form action="../adminlogin" method="post">
+                <form action="../" method="post">
                     {% csrf_token %}
-                    <input type="text" placeholder="USERNAME" name="username" class="cred">
+                    <input type="text" placeholder="Email" name="email" class="cred">
                     <br>
                     <br>
                     <input type="password" placeholder="Password" name="password" class="cred">
                     <br>
+                    <p>
+                        {{message}}
+                    </p>
                     <input type="checkbox" style="color: rgb(45, 47, 61);">remember me
                     <div style="margin: -18px 0px 0px 155px;">forgot
                         password?</div>
                     <input type="submit" value="Login" class="button2">
                 </form>
-                <a href="register.html">
+                <a href="userregister">
                     <p style="margin-left: 9px;" class="font">Don't have an account, Register</p>
                 </a>
             </div>

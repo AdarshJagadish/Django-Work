@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
-users=[]
+users=[{'name':'Adarsh','email':'jagadishadarsh@gmail.com','password':'9846675300'}]
 
 def register(request):
     if request.method=='POST':
@@ -14,7 +14,17 @@ def register(request):
     return render(request,'register.html',{'users':users})
 
 def login(request):
-    return render(request,'login.html')
+    message=''
+    if request.method=='POST':
+        email=request.POST['email']
+        password=request.POST['password']
+        for i in users:
+            if i['email']==email and i['password']==password:
+                message='Login Succesfull'
+                return redirect(home)
+            else:
+                message='Invalid email or password'
+    return render(request,'login.html',{'message':message})
 
 def home(request):
     return render(request,'home.html')

@@ -1,0 +1,198 @@
+.header {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: inline;
+  background-color: rgb(238, 238, 244);
+  padding: 20px;
+  position: fixed;
+  margin-left: -310px;
+  margin-top: -10px;
+  width: 100%;
+}
+.font {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: #333638;
+}
+.main {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.a li {
+  color: black;
+  display: inline;
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 15px;
+}
+.a {
+  display: inline;
+  margin-left: 500px;
+}
+.patty {
+  margin-top: 120px;
+  width: 405px;
+}
+.b {
+  width: 400px;
+  text-align: justify;
+}
+.b1 {
+  margin-left: 300px;
+}
+.icon {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding-bottom: 10px;
+}
+.c {
+  width: 300px;
+  padding: 0px;
+  margin-left: 800px;
+  margin-top: -2000px;
+}
+.fl {
+  display: flex;
+  flex-direction: row;
+}
+.o {
+  width: 315px;
+  margin-top: 120px;
+  padding-left: 20px;
+}
+.o img {
+  width: 315px;
+}
+.para {
+  font-weight: 550;
+  font-size: 20px;
+}
+.table div {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px 22px 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  width: 190px;
+}
+.sub p {
+  font-weight: 550;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.cul {
+  color: black;
+}
+.culture {
+  font-weight: 500;
+  font-size: 40px;
+  margin-left: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.line {
+  border-bottom: 2px solid #1e2022;
+}
+.Rimage {
+  height: 349px;
+}
+.subm {
+  margin: 0px 100px 100px 0px;
+}
+.fl2 {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0px 0px 0px 20px;
+}
+.edwin {
+  display: flex;
+}
+.space {
+  line-height: 25px;
+}
+.patty2 {
+  width: 180px;
+  margin-left: -3px;
+}
+.column {
+  width: 182px;
+  margin-right: 21px;
+}
+.cake2 {
+  width: 650px;
+  height: 430px;
+}
+.block {
+  border-bottom: solid black 2px;
+  width: 315px;
+  padding-left: 15px;
+}
+.photos{
+  width: 300px;
+}
+.tab{
+  height: 470px;
+  width: 710px;
+}
+.photo{
+  width: 320px;
+}
+.footer{
+  background-color: rgb(33 37 41);
+  margin: 10px 0px -45px -100px;
+  width: 2500px;
+}
+.link{
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+.achu{
+  margin-left: 450px;
+  color: white;
+}
+.column{
+  margin: 50px;
+  width: 175px;
+  font-size: large; 
+}
+.columnx{
+  margin: 50px;
+  width: 800px;
+  font-size: large; }
+
+.footer2{
+  background-color: rgb(122, 116, 116);
+  margin-left: -90px;
+  width: 2500px;
+  height: 100px;
+}
+.fi img{
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+.copyright{
+  margin-left: 400px; 
+  padding-top: 10px;
+  color: white;
+  line-height: 25px;
+  letter-spacing: 3px;
+}
+.fic img{
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  margin-top: 10px;
+}

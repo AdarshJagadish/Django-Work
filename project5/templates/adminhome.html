@@ -4,11 +4,15 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style_copy.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blaa.css' %}">
     <title>home page</title>
 </head>
 <body>
     <h1>Admin Home Page</h1>
     {{users}}
+    {% for i in users %}
+        <div class="profile">
+            <p>username: {{i.name}}</p>
+    {% endfor %}
 </body>
 </html>
