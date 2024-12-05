@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/blaa.css' %}">
-    <title>home page</title>
-</head>
-<body>
-    <h1>Admin Home Page</h1>
+    <title>Admin Page</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ebecd2;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-evenly;
+    }
+    .card {
+      background:#92c6e9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 15px;
+      text-align: center;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+      color: #333;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; padding: 20px 0;">Admin Page</h1>
+    <div class="container">
+      {% for i in users %}
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+          fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+          <path fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+        </svg>
+        <h3>{{ i[name] }}</h3>
+        <p>{{ i[email] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- <h1>Admin Home Page</h1>
     {{users}}
     {% for i in users %}
         <div class="profile">
             <p>username: {{i.name}}</p>
-    {% endfor %}
-</body>
+    {% endfor %} -->
+  </body>
 </html>
