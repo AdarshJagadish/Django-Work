@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from .models import *
 
 users=[]
 
@@ -10,9 +11,10 @@ def register(request):
         email=request.POST['email']
         password=request.POST['password']
         # print(slno,name,email,password)
-        users.append({'slno':slno+1,'name':name,'email':email,'password':password})
-        print(users)
-        return redirect(login)
+        # users.append({'slno':slno+1,'name':name,'email':email,'password':password})
+        # print(users)
+        # return redirect(login)
+        data=user.objects.create(name=name,email=email,password=password)
     return render(request,'register.html',{'users':users})
 
 def login(request):
