@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body class="page1">
+        <div class="main">
+            <div class="nav font">
+                <h2 style="padding-left:50px;" class="font">LOGO</h2>
+                <ul class="list">
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        Services
+                    </li>
+                    <li>
+                        Contact
+                    </li>
+                    <li>
+                        <a href="">
+                            <button class="button font">Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="block">
+                <div class="login">
+                    <h2 style="padding: 10px 90px;" class="font">Register</h2>
+                    <form action="../userregister" method="post">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" name="name"
+                            class="cred">
+                        <br>
+                        <br>
+                        <input type="text" placeholder="Username" name="username"
+                            class="cred">
+                        <br>
+                        <br>
+                        <input type="email" placeholder="Email" name="email"
+                            class="cred">
+                        <br>
+                        <br>
+                        <input type="password" placeholder="Password" name="password" class="cred">
+                        <br>
+                        <input type="checkbox"
+                            style="color: rgb(45, 47, 61);">remember me
+                        <div style="margin: -18px 0px 0px 155px;">forgot
+                            password?</div>
+                        <input type="submit" value="Register" class="button2">
+                    </form>
+                    <a href="../">
+                        <p style="margin-left: 9px;" class="font">Already have an account, Log In</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
