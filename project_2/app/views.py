@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User,auth
+from django.utils import timezone
 
 # Create your views here.
 def userregister(request):
@@ -18,22 +19,19 @@ def userlogin(request):
     if request.method=='POST':
         username=request.POST['username']
         password=request.POST['password']
-        user=auth.authenticate(username=username,password=password)
+        current_time=timezone.now()
+        
+        user=auth.authenticate(username=username,password=password,last_login=current_time)
         print(user)
         if user is not None:
             auth.login(request,user)
             return redirect(userhome)
-        else:
-            message='Incorrect username or password'
-            print(message)
-            return redirect(userlogin,message)
-
     return render(request,'user/login.html')
 
 def userhome(request):
     if '_auth_user_id' in request.session:
         user=User.objects.get(pk=request.session['_auth_user_id'])
-        return render(request,'user/home.html',{'user':user})
+        return render(request,'user/home.html')
     else:
         return redirect(userlogin)
 
@@ -42,6 +40,13 @@ def userlogout(request):
         auth.logout(request)
         return redirect(userlogin)
 def adminlogin(request):
+    if request.method=='POST':
+        username=request.POST['username']
+        password=request.POST['password']
+        users=User.objects.all()
+        print(users)
+        if username=='admin' and password=='admin':
+            return redirect(adminhome,{'users':users})        
     return render(request,'admin/login.html')
 
 def adminhome(request):

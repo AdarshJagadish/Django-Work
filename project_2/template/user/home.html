@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Home</title>
+  <link rel="stylesheet" href="{% static 'css/userstyle.css' %}">
 </head>
 <body>
-    <h1>USER HOME PAGE</h1>
-    <a href="../logout">Log out</a>
-    <br><br>
-    <h2>Hi, {{user.first_name}}</h2> 
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="../">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Welcome Message and Activity Section -->
+    <section class="content">
+      <h1>Welcome, {{user.username}} !</h1>
+      <p>Here's what's happening today:</p>
+      <div class="activity">
+        <p>- You have 3 new notifications.</p>
+        <p>- Your last login {{user.last_login}}.</p>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <aside class="profile">
+      <img src="{% static 'image/profile.png' %}" alt="Profile Picture" class="profile-pic">
+      <h2> {{user.first_name}} </h2>
+      <p>Username: {{user.username}}</p>
+      <p>Email: {{user.email}}</p>
+      <p>Joined Date: {{user.date_joined|date:"Y-m-d" }}</p>
+      <!-- <p>Bio: A short description about the user goes here.</p> -->
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Your Site. All rights reserved.</p>
+  </footer>
 </body>
 </html>

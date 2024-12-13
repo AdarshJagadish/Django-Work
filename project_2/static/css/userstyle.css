@@ -1,0 +1,102 @@
+/* styles.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9; /* Light neutral background */
+  color: #333; /* Classic dark text */
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: #002b5b; /* Navy blue */
+  color: #fff;
+  padding: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* Content Section */
+.content {
+  flex: 2;
+  margin-right: 2rem;
+}
+
+.content h1 {
+  color: #002b5b; /* Navy blue for headings */
+}
+
+.activity {
+  background: #fff; /* White background for activity feed */
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+.profile {
+  flex: 1;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #002b5b; /* Navy blue border */
+}
+
+.profile h2 {
+  margin-bottom: 0.5rem;
+  color: #002b5b;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #002b5b;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

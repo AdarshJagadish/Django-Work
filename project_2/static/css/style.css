@@ -46,7 +46,7 @@ li {
 }   
 
 .block {
-    border: 60px 0px 150px 50%;
+    margin: 5% 35%;
     background-color: rgba(85, 88, 121, 0.623);
     width: 350px;
     height: 400px;
