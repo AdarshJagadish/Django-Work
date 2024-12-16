@@ -15,7 +15,6 @@ def userregister(request):
     return render(request,'user/register.html')
 
 def userlogin(request):
-    message=''
     if request.method=='POST':
         username=request.POST['username']
         password=request.POST['password']
@@ -39,15 +38,28 @@ def userlogout(request):
     if '_auth_user_id' in request.session:
         auth.logout(request)
         return redirect(userlogin)
+
+adminid='admin'
+adminpass='admin'
 def adminlogin(request):
     if request.method=='POST':
         username=request.POST['username']
-        password=request.POST['password']
-        users=User.objects.all()
-        print(users)
-        if username=='admin' and password=='admin':
-            return redirect(adminhome,{'users':users})        
+        password=request.POST['password'] 
+        if username==adminid and password==adminpass:
+            request.session['adm']=username            
+            return redirect(adminhome)
     return render(request,'admin/login.html')
 
 def adminhome(request):
-    return render(request,'admin/home.html')
+    if 'adm' in request.session:
+        user=User.objects.all()
+        return render(request,'admin/home.html',{'user':user})
+    else:
+        return render(request,'admin/login.html')
+    
+def adminlogout(request):
+    if 'adm' in request.session:
+        del request.session['adm']
+        return redirect(adminlogin)
+    else:
+        return redirect(adminlogin)

@@ -16,7 +16,7 @@
           <li><a href="#">Users</a></li>
           <li><a href="#">Settings</a></li>
         </ul>
-        <a href="adminlogin" class="logout-btn">Logout</a>
+        <a href="adminlogout" class="logout-btn">Logout</a>
       </nav>
     </header>
 
@@ -25,11 +25,14 @@
       <h1>Admin Dashboard</h1>
       <section class="user-grid">
         <!-- Begin For Loop -->
-        {% for user in users %}
+        {% for i in user %}
         <div class="user-card">
-          <img src="{{ user.img }}" alt="{{ user.name }}" class="user-pic">
-          <h2>{{ user.name }}</h2>
-          <p>Bio: {{ user.bio }}</p>
+          <img src="{% static 'image/profile.png' %}" alt="{{ i.name }}" class="user-pic">
+          <h2>{{ i.username }}</h2>
+          <p>Name: {{ i.first_name }}</p>
+          <p>Email: {{ i.email }}</p>
+          <p>Join Date: {{ i.date_joined }}</p>
+          <p>Last Login: {{ i.last_login }}</p>
         </div>
         {% endfor %}
         <!-- End For Loop -->

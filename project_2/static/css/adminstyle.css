@@ -73,6 +73,11 @@ h1 {
   justify-items: center;
 }
 
+.p {
+  text-align: left;
+  margin-left: 2px;
+}
+
 .user-card {
   background-color: white;
   padding: 20px;
