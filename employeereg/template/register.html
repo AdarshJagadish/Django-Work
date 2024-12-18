@@ -28,7 +28,7 @@
                         Contact
                     </li>
                     <li>
-                        <a href="../user/login">
+                        <a href="#">
                             <button class="button font">Login</button>
                         </a>
                     </li>
@@ -37,7 +37,7 @@
             <div class="block" style="padding-bottom: 60px;">
                 <div class="login">
                     <h2 style="padding: 10px 90px;" class="font">Register</h2>
-                    <form action="../userregister" method="post">
+                    <form action="../register" method="post">
                         {% csrf_token %}
                         <input type="text" placeholder="Name" name="name"
                             class="cred">
@@ -47,9 +47,11 @@
                             class="cred">
                         <br>
                         <br>
-                        <select name="department">
+                        <select name="d">
                             <option selected disabled>---Select Department---</option>
-                            
+                            {% for i in deps %}
+                            <option value="{{i.pk}}">{{i.dname}}</option>
+                            {% endfor %}
                         </select>
                         <br>
                         <br>

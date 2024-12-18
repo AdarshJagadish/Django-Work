@@ -21,4 +21,17 @@ def adminhome(request):
         return render(request,'login.html')
 
 def userreg(request):
-    return render(request,'register.html')
+    department=department
+    if request.method=='POST':
+        username=request.POST['username']
+        name=request.POST['name']
+        email=request.POST['email']
+        password=request.POST['password']
+        data=User.objects.create_user(username=username,name=name,email=email,password=password)
+        data.save()
+        return redirect(adminlogin)
+        
+        
+        # dep=request.POST['d']
+        # deppk=department.objects.get(pk=dep)
+        # return render(request,'register.html',{'deps':deps,'emps':emps})
