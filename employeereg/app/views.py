@@ -15,23 +15,31 @@ def adminlogin(request):
     return render(request,'login.html')
 
 def adminhome(request):
+    emps=employee.objects.all()
+    deps=department.objects.all()
     if 'adm' in request.session:
-        return render(request,'home.html')
+        dep=request.POST['d']
+        deppk=department.objects.all()
+        return render(request,'home.html',{'deps':deps,'emps':emps})
     else:
         return render(request,'login.html')
 
 def userreg(request):
-    department=department
+    department=department.objects.all()
     if request.method=='POST':
         username=request.POST['username']
         name=request.POST['name']
         email=request.POST['email']
         password=request.POST['password']
-        data=User.objects.create_user(username=username,name=name,email=email,password=password)
+        dep=request.POST['d']
+        current_dep=department.objects.get(pk=dep)
+        data=employee.objects.create(username=username,name=name,email=email,password=password)
         data.save()
         return redirect(adminlogin)
+    return render(request,'register.html',{'deps':department})
         
-        
-        # dep=request.POST['d']
-        # deppk=department.objects.get(pk=dep)
-        # return render(request,'register.html',{'deps':deps,'emps':emps})
+def logout(request):
+    if 'adm' in request.session:
+        return redirect(adminlogin)
+    else:
+        return redirect(adminlogin)
