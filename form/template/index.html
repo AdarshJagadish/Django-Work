@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>HAI THERE,</h1>
+    <h1>REGISTER</h1>
+    <form action="../" method="POST">
+        {% csrf_token %}
+        <table>
+            {{data.as_table}}
+        </table>
+        <input type="submit" value="Register">
+    </form>]\
 </body>
 </html>
