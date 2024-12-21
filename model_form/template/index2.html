@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <table>
-        <form action="../media" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <tr>
-                <input type="text" name="description" placeholder="Description">
-            </tr>
-            <br>
-            <tr>
-                <input type="file" name="file">
-            </tr> <br>
-            <tr>
-                <input type="submit" value="Upload">
-            </tr>
-        </form>
-    </table>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .dispay{
+            display: flex;
+            flex-direction: row;
+                }
+            </style>
+    <body>
+        <table>
+            <form action="../media" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <tr>
+                    <input type="text" name="description"
+                        placeholder="Description">
+                </tr>
+                <br>
+                <tr>
+                    <input type="file" name="file">
+                </tr> <br>
+                <tr>
+                    <input type="submit" value="Upload">
+                </tr>
+                <br><br>
+                <div style="flex-wrap: wrap;">
+                    {% for i in photos %}
+                    <img src="{{ i.file.url }}" alt="jhoi">
+                    {% endfor %}
+                </div>
+            </form>
+        </table>
+    </body>
 </html>
