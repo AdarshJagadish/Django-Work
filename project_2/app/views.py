@@ -24,7 +24,7 @@ def userlogin(request):
         print(user)
         if user is not None:
             auth.login(request,user)
-            return redirect(userhome)
+            return redirect(userhome,user=user)
     return render(request,'user/login.html')
 
 def userhome(request):
